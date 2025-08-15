@@ -1,0 +1,23 @@
+[project]
+name = "fmea_advisor"
+version = "0.1.0"
+description = "fmea_advisor using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.159.0,<1.0.0"
+]
+
+[project.scripts]
+fmea_advisor = "fmea_advisor.main:run"
+run_crew = "fmea_advisor.main:run"
+train = "fmea_advisor.main:train"
+replay = "fmea_advisor.main:replay"
+test = "fmea_advisor.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
